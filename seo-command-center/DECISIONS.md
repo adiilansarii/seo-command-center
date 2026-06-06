@@ -24,10 +24,3 @@ Format:
 ## My log
 - `[--:--]` ...
 
-[2026-06-06]
-
-Decision:
-Use starter Python architecture instead of rewriting to Node.js.
-
-Reason:
-Starter already contains plugin, dashboard, MCP server and grading hooks.

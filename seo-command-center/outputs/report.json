@@ -2,14 +2,43 @@
   "site": "nmgtechnologies.com",
   "urls_crawled": 456,
   "summary": {
-    "total_issues": 4,
+    "total_issues": 9,
     "by_severity": {
       "High": 2,
-      "Medium": 2,
-      "Low": 0
+      "Medium": 4,
+      "Low": 3
     }
   },
   "issues": [
+    {
+      "type": "title_too_short",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/blog/tag/design",
+        "https://nmgtechnologies.com/blog/tag/events",
+        "https://nmgtechnologies.com/blog/tag/events/page/2",
+        "https://nmgtechnologies.com/blog/tag/featured",
+        "https://nmgtechnologies.com/blog/tag/growth",
+        "https://nmgtechnologies.com/blog/tag/marketing",
+        "https://nmgtechnologies.com/blog/tag/mobile",
+        "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "https://nmgtechnologies.com/blog/tag/technology",
+        "https://nmgtechnologies.com/blog/tag/web",
+        "https://nmgtechnologies.com/contact-us",
+        "https://nmgtechnologies.com/disclaimer",
+        "https://nmgtechnologies.com/services/crm-development",
+        "https://nmgtechnologies.com/services/dedicated-team-setups/",
+        "https://nmgtechnologies.com/services/erp-development",
+        "https://nmgtechnologies.com/services/shopify",
+        "https://nmgtechnologies.com/services/web-development",
+        "https://nmgtechnologies.com/sitemap",
+        "https://nmgtechnologies.com/wordpress-development"
+      ],
+      "count": 21,
+      "explanation": "Indexable pages with titles that are too short."
+    },
     {
       "type": "duplicate_title",
       "severity": "High",
@@ -102,6 +131,117 @@
       "explanation": "Titles likely truncated in search results."
     },
     {
+      "type": "duplicate_meta_description",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/services/crm-development",
+        "https://nmgtechnologies.com/services/ecommerce-development/magento-development/",
+        "https://nmgtechnologies.com/services/erp-development",
+        "https://nmgtechnologies.com/services/web-development",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/wealth-concert"
+      ],
+      "count": 16,
+      "explanation": "Pages sharing an identical meta description."
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/",
+        "https://nmgtechnologies.com/agentic-ai",
+        "https://nmgtechnologies.com/ai-driven-business-transformation-consulting",
+        "https://nmgtechnologies.com/ai-driven-devops-cloud-automation",
+        "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
+        "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
+        "https://nmgtechnologies.com/ai-machine-learning-solutions",
+        "https://nmgtechnologies.com/ai-optimized-ecommerce-solutions",
+        "https://nmgtechnologies.com/ai-powered-business-process-transformation",
+        "https://nmgtechnologies.com/ai-powered-saas-development",
+        "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-leap-2023-tech-conference-in-riyadh-saudi-arabia",
+        "https://nmgtechnologies.com/blog/sempo-hangouts-session-user-experience",
+        "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights",
+        "https://nmgtechnologies.com/blog/ui-ux-mobile-app-development",
+        "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
+        "https://nmgtechnologies.com/company/about-us",
+        "https://nmgtechnologies.com/company/outsourcing/",
+        "https://nmgtechnologies.com/company/promise/",
+        "https://nmgtechnologies.com/download-content-editorial-calendar",
+        "https://nmgtechnologies.com/get-custom-pricing",
+        "https://nmgtechnologies.com/industry/healthcare",
+        "https://nmgtechnologies.com/industry/marketresearch",
+        "https://nmgtechnologies.com/industry/staffing",
+        "https://nmgtechnologies.com/industry/travel",
+        "https://nmgtechnologies.com/mobile-development-checklist",
+        "https://nmgtechnologies.com/privacy-policy",
+        "https://nmgtechnologies.com/resources/library/python-development-guide",
+        "https://nmgtechnologies.com/services/custom-software-development/",
+        "https://nmgtechnologies.com/services/custom-software-development/php-development/",
+        "https://nmgtechnologies.com/services/custom-software-development/saas-development/",
+        "https://nmgtechnologies.com/services/dedicated-team-setups/",
+        "https://nmgtechnologies.com/services/mobile-application-development",
+        "https://nmgtechnologies.com/services/user-interface-design/",
+        "https://nmgtechnologies.com/solution/artificial-intelligence/",
+        "https://nmgtechnologies.com/solution/augmented-reality/",
+        "https://nmgtechnologies.com/solution/blockchain",
+        "https://nmgtechnologies.com/solution/cloud-apps/",
+        "https://nmgtechnologies.com/solution/fintech/",
+        "https://nmgtechnologies.com/success-stories/competiscan",
+        "https://nmgtechnologies.com/success-stories/compound-banc",
+        "https://nmgtechnologies.com/success-stories/international-insurance",
+        "https://nmgtechnologies.com/success-stories/wealth-concert"
+      ],
+      "count": 42,
+      "explanation": "Meta descriptions likely truncated in search results."
+    },
+    {
+      "type": "missing_h1",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/company/process/",
+        "https://nmgtechnologies.com/contact-us"
+      ],
+      "count": 2,
+      "explanation": "200 pages missing an H1 tag."
+    },
+    {
+      "type": "duplicate_h1",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/blog/tag/design",
+        "https://nmgtechnologies.com/blog/tag/events",
+        "https://nmgtechnologies.com/blog/tag/events/page/2",
+        "https://nmgtechnologies.com/blog/tag/featured",
+        "https://nmgtechnologies.com/blog/tag/growth",
+        "https://nmgtechnologies.com/blog/tag/marketing",
+        "https://nmgtechnologies.com/blog/tag/mobile",
+        "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "https://nmgtechnologies.com/blog/tag/search-engine-optimization",
+        "https://nmgtechnologies.com/blog/tag/technology",
+        "https://nmgtechnologies.com/blog/tag/web",
+        "https://nmgtechnologies.com/clients/case-studies/",
+        "https://nmgtechnologies.com/success-stories",
+        "https://nmgtechnologies.com/work/advanced-seo/",
+        "https://nmgtechnologies.com/work/ecommerce/",
+        "https://nmgtechnologies.com/work/mobile/",
+        "https://nmgtechnologies.com/work/web/"
+      ],
+      "count": 19,
+      "explanation": "Indexable pages sharing an identical H1."
+    },
+    {
       "type": "broken_link",
       "severity": "High",
       "affected_urls": [
@@ -139,11 +279,12 @@
     "Fix the 12 High-severity 'duplicate_title' issue(s) first.",
     "Fix the 6 High-severity 'broken_link' issue(s) first.",
     "Fix the 63 Medium-severity 'title_too_long' issue(s) first.",
-    "Fix the 7 Medium-severity 'redirect' issue(s) first."
+    "Fix the 16 Medium-severity 'duplicate_meta_description' issue(s) first.",
+    "Fix the 2 Medium-severity 'missing_h1' issue(s) first."
   ],
   "run_meta": {
     "model": "qwen3.5:9b",
     "model_calls": 0,
-    "duration_sec": 0.1
+    "duration_sec": 0.0
   }
 }

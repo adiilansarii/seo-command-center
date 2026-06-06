@@ -52,12 +52,19 @@ def detect(rows: list[dict]) -> list[dict]:
                            "count": len(urls), "explanation": explanation})
 
     html = [r for r in rows if is_html(r)]
+    all200 = [r for r in html if is_200(r)]
     idx200 = [r for r in html if is_200(r) and indexable(r)]
+
 
     # --- Titles ---
     add("missing_title", "High",
         [r["Address"] for r in idx200 if not (r.get("Title 1", "") or "").strip()],
         "Indexable pages with no title tag.")
+
+    add("title_too_short", "Low",
+        [r["Address"] for r in idx200 if (r.get("Title 1", "") or "").strip()
+         and _int(r.get("Title 1 Length")) < 30],
+        "Indexable pages with titles that are too short.")
 
     # duplicate titles (indexable only)
     by_title = defaultdict(list)
@@ -72,6 +79,36 @@ def detect(rows: list[dict]) -> list[dict]:
         [r["Address"] for r in idx200
          if _int(r.get("Title 1 Pixel Width")) > 561 or _int(r.get("Title 1 Length")) > 60],
         "Titles likely truncated in search results.")
+
+    # --- Meta Descriptions ---
+    add("missing_meta_description", "Medium",
+        [r["Address"] for r in idx200 if not (r.get("Meta Description 1", "") or "").strip()],
+        "Indexable pages missing a meta description.")
+
+    by_meta = defaultdict(list)
+    for r in idx200:
+        m = (r.get("Meta Description 1", "") or "").strip()
+        if m:
+            by_meta[m].append(r["Address"])
+    dup_m = [u for urls in by_meta.values() if len(urls) > 1 for u in urls]
+    add("duplicate_meta_description", "Medium", dup_m, "Pages sharing an identical meta description.")
+
+    add("meta_description_too_long", "Low",
+        [r["Address"] for r in idx200 if _int(r.get("Meta Description 1 Length")) > 155],
+        "Meta descriptions likely truncated in search results.")
+
+    # --- H1s ---
+    add("missing_h1", "Medium",
+        [r["Address"] for r in all200 if not (r.get("H1-1", "") or "").strip()],
+        "200 pages missing an H1 tag.")
+
+    by_h1 = defaultdict(list)
+    for r in idx200:
+        h = (r.get("H1-1", "") or "").strip()
+        if h:
+            by_h1[h].append(r["Address"])
+    dup_h = [u for urls in by_h1.values() if len(urls) > 1 for u in urls]
+    add("duplicate_h1", "Low", dup_h, "Indexable pages sharing an identical H1.")
 
     # --- Response codes ---
     add("broken_link", "High",
@@ -91,9 +128,7 @@ def detect(rows: list[dict]) -> list[dict]:
 
     # ----------------------------------------------------------------------- #
     # TODO (Sprint): add the rest of the rulebook for full accuracy:
-    #   title_too_short, missing_meta_description, duplicate_meta_description,
-    #   meta_description_too_long, missing_h1, duplicate_h1, redirect_chain,
-    #   thin_content, non_indexable_but_linked, slow_page
+    #   redirect_chain, thin_content, non_indexable_but_linked, slow_page
     # Each is a short rule over the columns — see rulebook.md.
     # ----------------------------------------------------------------------- #
 
