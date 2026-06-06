@@ -121,16 +121,33 @@ def detect(rows: list[dict]) -> list[dict]:
         [r["Address"] for r in rows if 300 <= _int(r.get("Status Code")) <= 399],
         "URLs that redirect (3xx).")
 
+    redirects = {r["Address"]: r.get("Redirect URL", "") for r in rows if 300 <= _int(r.get("Status Code")) <= 399}
+    chains = [u for u, target in redirects.items() if target and target in redirects]
+    add("redirect_chain", "High", chains, "A redirect whose target is also a redirect.")
+
     # --- Orphan pages ---
     add("orphan_page", "Medium",
         [r["Address"] for r in idx200 if _int(r.get("Inlinks")) == 0],
         "Indexable pages with zero internal links in.")
+
+    add("non_indexable_but_linked", "Medium",
+        [r["Address"] for r in rows if (r.get("Indexability", "") or "").strip().lower() == "non-indexable" and _int(r.get("Inlinks")) > 0],
+        "Pages marked Non-Indexable but have internal links.")
 
     # ----------------------------------------------------------------------- #
     # TODO (Sprint): add the rest of the rulebook for full accuracy:
     #   redirect_chain, thin_content, non_indexable_but_linked, slow_page
     # Each is a short rule over the columns — see rulebook.md.
     # ----------------------------------------------------------------------- #
+
+    indexable_pages = [r for r in html if indexable(r)]
+    add("thin_content", "Low",
+        [r["Address"] for r in indexable_pages if _int(r.get("Word Count")) < 200],
+        "Indexable pages with very low word count.")
+
+    add("slow_page", "Low",
+        [r["Address"] for r in rows if _float(r.get("Response Time")) > 1.0],
+        "Pages with a response time greater than 1 second.")
 
     return issues
 
