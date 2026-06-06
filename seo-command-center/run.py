@@ -44,6 +44,7 @@ def main():
     if not recs:
         recs.append("No issues detected on this crawl.")
     server.seo_recommend(recs)
+    server.seo_fix()
     server.RUN["model_calls"] = 0  # starter does no model calls; champion fixes will add some
     server.RUN["duration_sec"] = round(time.time() - t0, 1)
     server.seo_report()

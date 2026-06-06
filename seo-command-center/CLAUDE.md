@@ -40,3 +40,10 @@ dashboard at localhost:7700, and outputs `outputs/report.json` + `outputs/report
 * Successful detector changes should always be verified using `python run.py ../sample-export` before committing.
 * Rulebook compliance verification should be performed after each detector batch to ensure no required checks remain unimplemented.
 * Current focus is validating detector completeness against the rulebook before investing time in dashboard, reporting, or fixer enhancements.
+* Rulebook coverage review confirmed that all required detector rules are implemented and verified.
+* Detector development is considered functionally complete unless new rulebook discrepancies are discovered.
+* Current priority has shifted from issue detection to fix generation and recommendation quality.
+* Champion-tier scoring depends on generating useful title rewrites, meta description rewrites and redirect recommendations.
+* Future implementation work should focus on fixer architecture, export quality and report usability rather than adding more detector types.
+* Before modifying fixer logic, identify the exact files responsible for recommendations, rewrites and export generation.
+* Every major implementation phase should follow: architecture review → implementation → validation → commit → documentation update.

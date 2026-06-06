@@ -85,6 +85,41 @@ def seo_set_fixes(titles=None, redirect_map=None) -> dict:
     _emit("fixes", RUN["fixes"]); return {"titles": len(titles or []), "redirects": len(redirect_map or [])}
 
 
+def seo_fix() -> dict:
+    rows_map = {r["Address"]: r for r in RUN.get("rows", [])}
+    fixes = []
+
+    for issue in RUN.get("issues", []):
+        if issue["type"] in ["missing_title", "title_too_short", "title_too_long"]:
+            for url in issue["affected_urls"]:
+                r = rows_map.get(url, {})
+                old = (r.get("Title 1", "") or "").strip()
+                h1 = (r.get("H1-1", "") or "").strip()
+                site = RUN["site"] or "Website"
+                if issue["type"] == "missing_title":
+                    new = f"{h1 if h1 else site} | Optimized"
+                elif issue["type"] == "title_too_short":
+                    new = f"{old} - {site}"
+                else:
+                    new = old[:55] + "..." if len(old) > 55 else old
+                fixes.append({"url": url, "old": old, "new": new})
+
+        elif issue["type"] in ["missing_meta_description", "meta_description_too_long"]:
+            for url in issue["affected_urls"]:
+                r = rows_map.get(url, {})
+                old = (r.get("Meta Description 1", "") or "").strip()
+                h1 = (r.get("H1-1", "") or "").strip()
+                site = RUN["site"] or "Website"
+                if issue["type"] == "missing_meta_description":
+                    new = f"{h1 if h1 else site} - Best in class services."
+                else:
+                    new = old[:150] + "..." if len(old) > 150 else old
+                fixes.append({"url": url, "old": old, "new": new})
+
+    RUN["fixes"] = {"titles": fixes, "redirect_map": []}
+    _emit("fixes", RUN["fixes"])
+    return {"fixed_count": len(fixes)}
+
 def seo_recommend(recommendations: list) -> dict:
     RUN["recommendations"] = recommendations
     _emit("recommendations", {"recommendations": recommendations}); return {"count": len(recommendations)}
@@ -191,6 +226,11 @@ def _run_mcp():
     def detect_issues() -> dict:
         """Run the SEO rulebook detectors over the loaded crawl."""
         return seo_detect()
+
+    @mcp.tool()
+    def fix() -> dict:
+        """Generate minimal title and meta recommendations based on common SEO patterns."""
+        return seo_fix()
 
     @mcp.tool()
     def set_fixes(titles: list = None, redirect_map: list = None) -> dict:

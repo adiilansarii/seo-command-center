@@ -41,4 +41,8 @@ Format per entry:
 
    * **For:** Verifying detector coverage against the complete rulebook and identifying any remaining gaps before moving to dashboard or fixer improvements.
    * **Revised?** No.
-  
+
+5. **Prompt:** "Read README.md, run.py, skills/seo-audit/SKILL.md, agents/, and commands/seo-audit.md. Analyze the fixer architecture and explain title rewrites, meta rewrites, redirect recommendations, required outputs, implemented features and missing features. Do not modify files."
+
+   - **For:** Understanding the fixer architecture before implementing title, meta and redirect recommendations.
+   - **Revised?** No.  
