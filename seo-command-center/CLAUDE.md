@@ -47,3 +47,8 @@ dashboard at localhost:7700, and outputs `outputs/report.json` + `outputs/report
 * Future implementation work should focus on fixer architecture, export quality and report usability rather than adding more detector types.
 * Before modifying fixer logic, identify the exact files responsible for recommendations, rewrites and export generation.
 * Every major implementation phase should follow: architecture review → implementation → validation → commit → documentation update.
+* Detector implementation phase is complete; current focus is recommendation generation and report quality.
+* Title and meta recommendations should provide actionable SEO fixes rather than generic advice.
+* Report output should connect detected issues with suggested resolutions.
+* Remaining development time should prioritize scoring impact over architectural refinements.
+* A simple working fixer is preferred over an incomplete advanced solution.

@@ -39,3 +39,10 @@ Format:
 
 - `[15:37]` Deferred implementation until architecture review completed → Reduced risk of modifying the wrong files and ensured alignment with the starter bundle design.
 
+* `[15:40]` Shifted development focus from detector coverage to fixer generation → Detector implementation and rulebook verification are complete, so remaining effort is concentrated on improving recommendation quality and report value.
+
+* `[15:48]` Chose a minimal recommendation engine first → Prioritized working title and meta rewrite suggestions over advanced optimization to maximize scoring impact within remaining sprint time.
+
+* `[15:54]` Integrated recommendations into report output → Ensured detected issues are paired with actionable fixes rather than only reporting problems.
+
+

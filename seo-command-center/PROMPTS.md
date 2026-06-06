@@ -46,3 +46,24 @@ Format per entry:
 
    - **For:** Understanding the fixer architecture before implementing title, meta and redirect recommendations.
    - **Revised?** No.  
+
+7. **Prompt:** "Implement a minimal but working fixer.
+  Requirements:
+  1. Generate title recommendations for:
+
+   * missing_title
+   * title_too_short
+   * title_too_long
+  2. Generate meta description recommendations for:
+
+   * missing_meta_description
+   * meta_description_too_long
+  3. Add recommendations to report.json output.
+  Keep implementation simple.
+  Modify only required files.
+  Show diff before applying."
+
+* **For:** Implementing champion-tier recommendation generation and improving report usefulness.
+* **Revised?** No.
+
+
