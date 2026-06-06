@@ -120,6 +120,7 @@ def seo_fix() -> dict:
     _emit("fixes", RUN["fixes"])
     return {"fixed_count": len(fixes)}
 
+
 def seo_recommend(recommendations: list) -> dict:
     RUN["recommendations"] = recommendations
     _emit("recommendations", {"recommendations": recommendations}); return {"count": len(recommendations)}
