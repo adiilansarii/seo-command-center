@@ -23,5 +23,12 @@ Format per entry:
 ---
 
 ## My prompts
-1. ...
-2. ...
+1.
+Prompt:
+Analyze starter architecture and identify the main implementation files.
+
+Purpose:
+Understand build structure before coding.
+
+Result:
+seo/detector.py identified as primary implementation target.

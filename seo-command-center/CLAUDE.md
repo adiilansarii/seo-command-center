@@ -32,3 +32,29 @@ dashboard at localhost:7700, and outputs `outputs/report.json` + `outputs/report
 ## Things I have learned during the build (update this as you go)
 - (e.g. "SF leaves Title 1 blank on redirected URLs — must filter Status Code 200 first")
 - ...
+
+Goal:
+Build SEO Command Center plugin.
+
+Primary focus:
+- Detection accuracy
+- report.json correctness
+
+Required issues:
+- Missing title
+- Duplicate title
+- Missing meta
+- Duplicate meta
+- Missing H1
+- Broken links
+- Redirects
+- Redirect chains
+- Missing alt text
+- Thin content
+- Orphan pages
+- Canonical issues
+
+Constraints:
+- Offline
+- Local Ollama
+- Use starter architecture
