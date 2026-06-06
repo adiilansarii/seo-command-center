@@ -32,3 +32,13 @@ Format per entry:
    * **For:** Quickly identifying completed and missing SEO detectors without analyzing the whole project.
    * **Revised?** Yes. Replaced a full-project analysis prompt because it was taking too long.
 
+3. **Prompt:** "Open seo/detector.py. Implement title_too_short, missing_meta_description, duplicate_meta_description, meta_description_too_long, missing_h1, duplicate_h1, redirect_chain, non_indexable_but_linked, thin_content and slow_page."
+
+   - **For:** Expanding detector coverage to align with the rulebook.
+   - **Revised?** No.
+
+4. **Prompt:** "Read rulebook.md. Compare every rulebook rule against seo/detector.py. Create a checklist with three sections: Implemented, Missing, and Partially Implemented. Do not modify any files."
+
+   * **For:** Verifying detector coverage against the complete rulebook and identifying any remaining gaps before moving to dashboard or fixer improvements.
+   * **Revised?** No.
+  

@@ -32,13 +32,11 @@ dashboard at localhost:7700, and outputs `outputs/report.json` + `outputs/report
 ## Things I have learned during the build (update this as you go)
 - (e.g. "SF leaves Title 1 blank on redirected URLs — must filter Status Code 200 first")
 - ...
-
-* Starter bundle already provides working pipeline: CSV loading, issue detection, report generation and dashboard hosting.
-* `seo/detector.py` is the primary implementation file and currently contains only a subset of the rulebook detectors.
-* Detection accuracy is the highest-priority scoring area; dashboard improvements are secondary.
-* Existing title and meta checks should only run on HTML pages that are both Status Code 200 and Indexable.
-* The hidden grading export will differ from the provided sample export, so detector logic must remain generic.
-* Process documentation (`CLAUDE.md`, `PROMPTS.md`, `DECISIONS.md`, git commits and audit logs) is part of the grading criteria.
-* Small, focused Claude prompts produce faster results than full-project analysis prompts.
-* The starter bundle successfully runs against the sample export and generates `report.json` and `report.html`.
-
+* Redirect chain detection can be implemented by building a redirect map and checking whether a redirect target is itself a redirecting URL.
+* Non-indexable pages with internal inlinks should be flagged separately because crawl architecture may still be directing users and bots toward them.
+* Thin content detection currently uses a word-count threshold and may require rulebook validation before final submission.
+* Slow page detection currently uses response-time thresholds and should be verified against the official rulebook before finalizing.
+* The detector expansion increased issue coverage from 4 detected issue types in the starter implementation to 12 issue types on the sample export.
+* Successful detector changes should always be verified using `python run.py ../sample-export` before committing.
+* Rulebook compliance verification should be performed after each detector batch to ensure no required checks remain unimplemented.
+* Current focus is validating detector completeness against the rulebook before investing time in dashboard, reporting, or fixer enhancements.
