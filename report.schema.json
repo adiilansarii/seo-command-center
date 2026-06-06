@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Forge Sprint 01 — report.json output contract",
+  "type": "object",
+  "required": ["site", "urls_crawled", "summary", "issues", "run_meta"],
+  "properties": {
+    "site": { "type": "string" },
+    "urls_crawled": { "type": "integer" },
+    "summary": {
+      "type": "object",
+      "required": ["total_issues", "by_severity"],
+      "properties": {
+        "total_issues": { "type": "integer" },
+        "by_severity": {
+          "type": "object",
+          "properties": {
+            "High": { "type": "integer" },
+            "Medium": { "type": "integer" },
+            "Low": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "severity", "affected_urls", "count"],
+        "properties": {
+          "type": { "type": "string" },
+          "severity": { "type": "string", "enum": ["High", "Medium", "Low"] },
+          "affected_urls": { "type": "array", "items": { "type": "string" } },
+          "count": { "type": "integer" },
+          "explanation": { "type": "string" }
+        }
+      }
+    },
+    "fixes": {
+      "type": "object",
+      "properties": {
+        "titles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url", "new"],
+            "properties": {
+              "url": { "type": "string" },
+              "old": { "type": "string" },
+              "new": { "type": "string" }
+            }
+          }
+        },
+        "redirect_map": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to"],
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "recommendations": { "type": "array", "items": { "type": "string" } },
+    "run_meta": {
+      "type": "object",
+      "required": ["model_calls"],
+      "properties": {
+        "model": { "type": "string" },
+        "model_calls": { "type": "integer" },
+        "duration_sec": { "type": "number" }
+      }
+    }
+  }
+}
