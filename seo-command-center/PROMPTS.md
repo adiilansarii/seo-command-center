@@ -26,3 +26,9 @@ Format per entry:
 1. **Prompt:** "Analyze this starter bundle. Read: README.md, ../rulebook.md, ../report.schema.json, run.py, seo/detector.py. Explain: 1. Which rulebook detectors are already implemented. 2. Which detectors are missing. 3. Which detectors should be implemented first for maximum score."
    - **For:** Performing a gap analysis to identify missing SEO detectors.
    - **Revised?** No.
+
+2. **Prompt:** "Read seo/detector.py only. List: 1. Implemented detectors 2. Missing detectors. Do not modify files."
+
+   * **For:** Quickly identifying completed and missing SEO detectors without analyzing the whole project.
+   * **Revised?** Yes. Replaced a full-project analysis prompt because it was taking too long.
+

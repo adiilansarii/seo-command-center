@@ -33,3 +33,12 @@ dashboard at localhost:7700, and outputs `outputs/report.json` + `outputs/report
 - (e.g. "SF leaves Title 1 blank on redirected URLs — must filter Status Code 200 first")
 - ...
 
+* Starter bundle already provides working pipeline: CSV loading, issue detection, report generation and dashboard hosting.
+* `seo/detector.py` is the primary implementation file and currently contains only a subset of the rulebook detectors.
+* Detection accuracy is the highest-priority scoring area; dashboard improvements are secondary.
+* Existing title and meta checks should only run on HTML pages that are both Status Code 200 and Indexable.
+* The hidden grading export will differ from the provided sample export, so detector logic must remain generic.
+* Process documentation (`CLAUDE.md`, `PROMPTS.md`, `DECISIONS.md`, git commits and audit logs) is part of the grading criteria.
+* Small, focused Claude prompts produce faster results than full-project analysis prompts.
+* The starter bundle successfully runs against the sample export and generates `report.json` and `report.html`.
+
