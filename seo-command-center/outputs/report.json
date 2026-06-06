@@ -1103,15 +1103,15 @@
     "redirect_map": []
   },
   "recommendations": [
-    "Fix the 21 Low-severity 'title_too_short' issue(s).",
-    "Fix the 12 High-severity 'duplicate_title' issue(s).",
-    "Fix the 63 Medium-severity 'title_too_long' issue(s).",
-    "Fix the 16 Medium-severity 'duplicate_meta_description' issue(s).",
-    "Fix the 42 Low-severity 'meta_description_too_long' issue(s)."
+    "Fix the 12 High-severity 'duplicate_title' issue(s) first.",
+    "Fix the 6 High-severity 'broken_link' issue(s) first.",
+    "Fix the 63 Medium-severity 'title_too_long' issue(s) first.",
+    "Fix the 16 Medium-severity 'duplicate_meta_description' issue(s) first.",
+    "Fix the 2 Medium-severity 'missing_h1' issue(s) first."
   ],
   "run_meta": {
     "model": "qwen3.5:9b",
     "model_calls": 0,
-    "duration_sec": 0
+    "duration_sec": 0.0
   }
 }
