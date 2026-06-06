@@ -193,7 +193,9 @@ class H(BaseHTTPRequestHandler):
             issues = RUN["issues"]
             recs = [f"Fix the {i['count']} {i['severity']}-severity '{i['type']}' issue(s)." for i in issues[:5]]
             seo_recommend(recs)
-            self._send(200, "Audit triggered! Check the dashboard.")
+            self.send_response(302)
+            self.send_header("Location", "/")
+            self.end_headers()
         elif self.path == "/events":
             self.send_response(200); self.send_header("Content-Type", "text/event-stream")
             self.send_header("Cache-Control", "no-cache"); self.end_headers()
