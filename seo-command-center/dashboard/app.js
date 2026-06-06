@@ -12,20 +12,43 @@ function addIssue(i) {
   tr.innerHTML = `<td><span class="sev ${i.severity.toLowerCase()}">${i.severity}</span></td>
                   <td>${i.type}</td><td>${i.count}</td>`;
   tb.appendChild(tr);
-  totals[i.severity] = (totals[i.severity] || 0) + 1; totals.total++;
+  // FIX: add i.count (affected URLs), not just 1 (issue type count)
+  totals[i.severity] = (totals[i.severity] || 0) + i.count;
+  totals.total += i.count;
   $("c-total").textContent = totals.total; $("c-high").textContent = totals.High;
   $("c-med").textContent = totals.Medium; $("c-low").textContent = totals.Low;
 }
 function handle({ event, data }) {
   if (event === "snapshot") {
     if (data.site) { $("meta").textContent = "· " + data.site; $("urls").textContent = (data.urls||0) + " URLs"; }
-    (data.issues || []).forEach(addIssue);
+    if (data.summary) {
+      const s = data.summary.by_severity || {};
+      totals = { High: s.High||0, Medium: s.Medium||0, Low: s.Low||0, total: data.summary.total_issues||0 };
+      $("c-total").textContent = totals.total; $("c-high").textContent = totals.High;
+      $("c-med").textContent = totals.Medium; $("c-low").textContent = totals.Low;
+    }
+    (data.issues || []).forEach(i => {
+      const tb = $("tbody"); if (tb.querySelector(".empty")) tb.innerHTML = "";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td><span class="sev ${i.severity.toLowerCase()}">${i.severity}</span></td>
+                      <td>${i.type}</td><td>${i.count}</td>`;
+      tb.appendChild(tr);
+    });
   } else if (event === "loaded") {
     $("meta").textContent = "· " + data.site; $("urls").textContent = data.urls + " URLs";
     log(`Loaded ${data.urls} URLs from ${data.site}`); $("tbody").innerHTML = "";
     totals = { High:0, Medium:0, Low:0, total:0 };
+    $("c-total").textContent = 0; $("c-high").textContent = 0;
+    $("c-med").textContent = 0; $("c-low").textContent = 0;
   } else if (event === "issue") { addIssue(data); log(`Found ${data.count} × ${data.type}`); }
-  else if (event === "summary") { log(`Audit complete: ${data.total_issues} issue types`); }
+  else if (event === "summary") {
+    // Sync KPI counters from authoritative summary once all issues are in
+    const s = data.by_severity || {};
+    totals = { High: s.High||0, Medium: s.Medium||0, Low: s.Low||0, total: data.total_issues||0 };
+    $("c-total").textContent = totals.total; $("c-high").textContent = totals.High;
+    $("c-med").textContent = totals.Medium; $("c-low").textContent = totals.Low;
+    log(`Audit complete: ${data.total_issues} total issues`);
+  }
   else if (event === "fixes") { log(`Fixes ready: ${(data.titles||[]).length} titles, ${(data.redirect_map||[]).length} redirects`); }
   else if (event === "exported") { $("export").innerHTML = "<b>report.html written ✓</b><br><span style='color:#c8c5be;font-size:12px'>Open or email outputs/report.html to the client.</span>"; }
   else if (event === "saved") { log("report.json saved"); }

@@ -2,43 +2,14 @@
   "site": "nmgtechnologies.com",
   "urls_crawled": 456,
   "summary": {
-    "total_issues": 12,
+    "total_issues": 360,
     "by_severity": {
-      "High": 2,
-      "Medium": 5,
-      "Low": 5
+      "High": 18,
+      "Medium": 98,
+      "Low": 244
     }
   },
   "issues": [
-    {
-      "type": "title_too_short",
-      "severity": "Low",
-      "affected_urls": [
-        "https://nmgtechnologies.com/blog",
-        "https://nmgtechnologies.com/blog/author/nishtha",
-        "https://nmgtechnologies.com/blog/tag/design",
-        "https://nmgtechnologies.com/blog/tag/events",
-        "https://nmgtechnologies.com/blog/tag/events/page/2",
-        "https://nmgtechnologies.com/blog/tag/featured",
-        "https://nmgtechnologies.com/blog/tag/growth",
-        "https://nmgtechnologies.com/blog/tag/marketing",
-        "https://nmgtechnologies.com/blog/tag/mobile",
-        "https://nmgtechnologies.com/blog/tag/outsourcing",
-        "https://nmgtechnologies.com/blog/tag/technology",
-        "https://nmgtechnologies.com/blog/tag/web",
-        "https://nmgtechnologies.com/contact-us",
-        "https://nmgtechnologies.com/disclaimer",
-        "https://nmgtechnologies.com/services/crm-development",
-        "https://nmgtechnologies.com/services/dedicated-team-setups/",
-        "https://nmgtechnologies.com/services/erp-development",
-        "https://nmgtechnologies.com/services/shopify",
-        "https://nmgtechnologies.com/services/web-development",
-        "https://nmgtechnologies.com/sitemap",
-        "https://nmgtechnologies.com/wordpress-development"
-      ],
-      "count": 21,
-      "explanation": "Indexable pages with titles that are too short."
-    },
     {
       "type": "duplicate_title",
       "severity": "High",
@@ -57,7 +28,7 @@
         "https://nmgtechnologies.com/success-stories/wealth-concert"
       ],
       "count": 12,
-      "explanation": "Pages sharing an identical title."
+      "explanation": "Pages sharing an identical title tag."
     },
     {
       "type": "title_too_long",
@@ -128,7 +99,36 @@
         "https://nmgtechnologies.com/work/ecommerce/"
       ],
       "count": 63,
-      "explanation": "Titles likely truncated in search results."
+      "explanation": "Titles likely truncated in search results (> 60 chars or > 561px)."
+    },
+    {
+      "type": "title_too_short",
+      "severity": "Low",
+      "affected_urls": [
+        "https://nmgtechnologies.com/blog",
+        "https://nmgtechnologies.com/blog/author/nishtha",
+        "https://nmgtechnologies.com/blog/tag/design",
+        "https://nmgtechnologies.com/blog/tag/events",
+        "https://nmgtechnologies.com/blog/tag/events/page/2",
+        "https://nmgtechnologies.com/blog/tag/featured",
+        "https://nmgtechnologies.com/blog/tag/growth",
+        "https://nmgtechnologies.com/blog/tag/marketing",
+        "https://nmgtechnologies.com/blog/tag/mobile",
+        "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "https://nmgtechnologies.com/blog/tag/technology",
+        "https://nmgtechnologies.com/blog/tag/web",
+        "https://nmgtechnologies.com/contact-us",
+        "https://nmgtechnologies.com/disclaimer",
+        "https://nmgtechnologies.com/services/crm-development",
+        "https://nmgtechnologies.com/services/dedicated-team-setups/",
+        "https://nmgtechnologies.com/services/erp-development",
+        "https://nmgtechnologies.com/services/shopify",
+        "https://nmgtechnologies.com/services/web-development",
+        "https://nmgtechnologies.com/sitemap",
+        "https://nmgtechnologies.com/wordpress-development"
+      ],
+      "count": 21,
+      "explanation": "Indexable pages with titles that are too short (< 30 chars)."
     },
     {
       "type": "duplicate_meta_description",
@@ -202,7 +202,7 @@
         "https://nmgtechnologies.com/success-stories/wealth-concert"
       ],
       "count": 42,
-      "explanation": "Meta descriptions likely truncated in search results."
+      "explanation": "Meta descriptions likely truncated in search results (> 155 chars)."
     },
     {
       "type": "missing_h1",
@@ -271,24 +271,6 @@
       "explanation": "URLs that redirect (3xx)."
     },
     {
-      "type": "non_indexable_but_linked",
-      "severity": "Medium",
-      "affected_urls": [
-        "https://nmgtechnologies.com/company/about-us/",
-        "https://nmgtechnologies.com/compound-banc",
-        "https://nmgtechnologies.com/get-custom-pricing?utm_source=blog",
-        "https://nmgtechnologies.com/industry/edtech",
-        "https://nmgtechnologies.com/services/mobile-application-development/",
-        "https://nmgtechnologies.com/services/mobile-application-development/android-app-development/",
-        "https://nmgtechnologies.com/services/user-interface-design/mobile-versions/",
-        "https://nmgtechnologies.com/solution/blockchain/",
-        "https://nmgtechnologies.com/solution/internet-of-things/",
-        "https://nmgtechnologies.com/work/design/"
-      ],
-      "count": 10,
-      "explanation": "Pages marked Non-Indexable but have internal links."
-    },
-    {
       "type": "thin_content",
       "severity": "Low",
       "affected_urls": [
@@ -304,7 +286,25 @@
         "https://nmgtechnologies.com/success-stories"
       ],
       "count": 10,
-      "explanation": "Indexable pages with very low word count."
+      "explanation": "Indexable pages with a very low word count (< 200 words)."
+    },
+    {
+      "type": "non_indexable_but_linked",
+      "severity": "Medium",
+      "affected_urls": [
+        "https://nmgtechnologies.com/company/about-us/",
+        "https://nmgtechnologies.com/compound-banc",
+        "https://nmgtechnologies.com/get-custom-pricing?utm_source=blog",
+        "https://nmgtechnologies.com/industry/edtech",
+        "https://nmgtechnologies.com/services/mobile-application-development/",
+        "https://nmgtechnologies.com/services/mobile-application-development/android-app-development/",
+        "https://nmgtechnologies.com/services/user-interface-design/mobile-versions/",
+        "https://nmgtechnologies.com/solution/blockchain/",
+        "https://nmgtechnologies.com/solution/internet-of-things/",
+        "https://nmgtechnologies.com/work/design/"
+      ],
+      "count": 10,
+      "explanation": "Non-indexable pages that still receive internal links."
     },
     {
       "type": "slow_page",
@@ -470,648 +470,510 @@
   "fixes": {
     "titles": [
       {
-        "url": "https://nmgtechnologies.com/blog",
-        "old": "Blog",
-        "new": "Blog - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/author/nishtha",
-        "old": "Blog | Nishtha",
-        "new": "Blog | Nishtha - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/design",
-        "old": "Blog | Design",
-        "new": "Blog | Design - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/events",
-        "old": "Blog | Events",
-        "new": "Blog | Events - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/events/page/2",
-        "old": "Blog | Events (2)",
-        "new": "Blog | Events (2) - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/featured",
-        "old": "Blog | Featured",
-        "new": "Blog | Featured - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/growth",
-        "old": "Blog | Growth",
-        "new": "Blog | Growth - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/marketing",
-        "old": "Blog | Marketing",
-        "new": "Blog | Marketing - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/mobile",
-        "old": "Blog | Mobile",
-        "new": "Blog | Mobile - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/outsourcing",
-        "old": "Blog | Outsourcing",
-        "new": "Blog | Outsourcing - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/technology",
-        "old": "Blog | Technology",
-        "new": "Blog | Technology - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/tag/web",
-        "old": "Blog | Web",
-        "new": "Blog | Web - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/contact-us",
-        "old": "Contact Us - NMG Technologies",
-        "new": "Contact Us - NMG Technologies - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/disclaimer",
-        "old": "Website Disclaimer",
-        "new": "Website Disclaimer - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/crm-development",
-        "old": "CRM Development Services",
-        "new": "CRM Development Services - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/dedicated-team-setups/",
-        "old": "Dedicated Team Setups",
-        "new": "Dedicated Team Setups - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/erp-development",
-        "old": "ERP Development",
-        "new": "ERP Development - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/shopify",
-        "old": "Shopify Development",
-        "new": "Shopify Development - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/web-development",
-        "old": "Web Development",
-        "new": "Web Development - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/sitemap",
-        "old": "Sitemap - NMG Technologies",
-        "new": "Sitemap - NMG Technologies - nmgtechnologies.com"
-      },
-      {
-        "url": "https://nmgtechnologies.com/wordpress-development",
-        "old": "WordPress Development",
-        "new": "WordPress Development - nmgtechnologies.com"
-      },
-      {
         "url": "https://nmgtechnologies.com/",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/agentic-ai",
         "old": "Agentic AI Consulting Services | Expert AI Development & Integration",
-        "new": "Agentic AI Consulting Services | Expert AI Development ..."
+        "new": "Agentic AI Consulting Services | Expert AI Development & ..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
         "old": "Enterprise AI Solutions | AI Software and Development Company",
-        "new": "Enterprise AI Solutions | AI Software and Development C..."
+        "new": "Enterprise AI Solutions | AI Software and Development Com..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
         "old": "AI App Development Services | Custom Artificial Intelligence Applications",
-        "new": "AI App Development Services | Custom Artificial Intelli..."
+        "new": "AI App Development Services | Custom Artificial Intellige..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-optimized-ecommerce-solutions",
         "old": "AI-Powered Ecommerce | Advanced AI Solutions for Online Retail",
-        "new": "AI-Powered Ecommerce | Advanced AI Solutions for Online..."
+        "new": "AI-Powered Ecommerce | Advanced AI Solutions for Online R..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-powered-business-process-transformation",
         "old": "AI Powered Service | Innovative AI-Driven Solutions for Business",
-        "new": "AI Powered Service | Innovative AI-Driven Solutions for..."
+        "new": "AI Powered Service | Innovative AI-Driven Solutions for B..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/advantages-of-asp-net-core",
         "old": ".NET Core: 20 Advantages of Building Your Software in ASP.NET Core |",
-        "new": ".NET Core: 20 Advantages of Building Your Software in A..."
+        "new": ".NET Core: 20 Advantages of Building Your Software in ASP..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/best-practices-offshore-software-development",
         "old": "Best Practices of Offshore Software Development Company (2022)",
-        "new": "Best Practices of Offshore Software Development Company..."
+        "new": "Best Practices of Offshore Software Development Company (..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/how-to-build-an-app-like-uber",
         "old": "How To Build an App like Uber - Mobile App Development | NMG",
-        "new": "How To Build an App like Uber - Mobile App Development ..."
+        "new": "How To Build an App like Uber - Mobile App Development | NMG"
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-technologies-made-list-top-mobile-app-development-companies-goodfirms",
         "old": "NMG Made It on the List of Top Mobile App Development Companies at GoodFirms",
-        "new": "NMG Made It on the List of Top Mobile App Development C..."
+        "new": "NMG Made It on the List of Top Mobile App Development Com..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-technologies-participated-in-softwave-2023-the-republic-of-korea-software-exhibition",
         "old": "NMG Technologies Participated in Softwave 2023, The Republic of Korea Software Exhibition",
-        "new": "NMG Technologies Participated in Softwave 2023, The Rep..."
+        "new": "NMG Technologies Participated in Softwave 2023, The Repub..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-leap-2023-tech-conference-in-riyadh-saudi-arabia",
         "old": "NMG Technologies to Participate in LEAP 2023 Tech Conference in Riyadh, Saudi Arabia",
-        "new": "NMG Technologies to Participate in LEAP 2023 Tech Confe..."
+        "new": "NMG Technologies to Participate in LEAP 2023 Tech Confere..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-mobile-word-capital-barcelona-the-worlds-largest-and-most-influential-connectivity-event",
         "old": "NMG Technologies to Participate in Mobile Word Capital Barcelona \u2013 the world\u2019s largest and most influential connectivity event",
-        "new": "NMG Technologies to Participate in Mobile Word Capital ..."
+        "new": "NMG Technologies to Participate in Mobile Word Capital Ba..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-retail-innovation-conference-and-expo-2023-in-chicago",
         "old": "NMG Technologies to Participate in Retail Innovation Conference and Expo 2023 in Chicago",
-        "new": "NMG Technologies to Participate in Retail Innovation Co..."
+        "new": "NMG Technologies to Participate in Retail Innovation Conf..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-sponsor-and-exhibit-at-brighton-seo-2023-and-online-pr-show-2023",
         "old": "NMG Technologies to Sponsor and Exhibit at Brighton SEO 2023 and Online PR Show 2023",
-        "new": "NMG Technologies to Sponsor and Exhibit at Brighton SEO..."
+        "new": "NMG Technologies to Sponsor and Exhibit at Brighton SEO 2..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-to-participate-in-the-largest-tech-expo-in-the-middle-east-gitex-global-2022-dubai",
         "old": "NMG to Participate in the Largest Tech Expo in the Middle East - GITEX Global 2022, Dubai",
-        "new": "NMG to Participate in the Largest Tech Expo in the Midd..."
+        "new": "NMG to Participate in the Largest Tech Expo in the Middle..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/nmg-to-participate-in-the-largest-tech-expo-in-the-middle-east-gitex-global-2023-dubai",
         "old": "NMG to Participate in the Largest Tech Expo in the Middle East - GITEX Global 2023, Dubai",
-        "new": "NMG to Participate in the Largest Tech Expo in the Midd..."
+        "new": "NMG to Participate in the Largest Tech Expo in the Middle..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/sempo-hangouts-session-user-experience",
         "old": "15 Best Things About Web Design & User Experience in 2019 | NMG",
-        "new": "15 Best Things About Web Design & User Experience in 20..."
+        "new": "15 Best Things About Web Design & User Experience in 2019..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/top-wordpress-themes",
         "old": "Top 15 WordPress Theme for Your Business in 2019 | NMG Technologies",
-        "new": "Top 15 WordPress Theme for Your Business in 2019 | NMG ..."
+        "new": "Top 15 WordPress Theme for Your Business in 2019 | NMG Te..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/ui-ux-mobile-app-development",
         "old": "Importance of UI & UX in mobile app development in 2022 | NMG",
-        "new": "Importance of UI & UX in mobile app development in 2022..."
+        "new": "Importance of UI & UX in mobile app development in 2022 |..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/wordpress-website-perfect-solution-small-business",
         "old": "Why WordPress Website Is The Perfect Solution For Your Small Business",
-        "new": "Why WordPress Website Is The Perfect Solution For Your ..."
+        "new": "Why WordPress Website Is The Perfect Solution For Your Sm..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
         "old": "How to Manage Work from home during the coronavirus lockdown | NMG",
-        "new": "How to Manage Work from home during the coronavirus loc..."
+        "new": "How to Manage Work from home during the coronavirus lockd..."
       },
       {
         "url": "https://nmgtechnologies.com/clients/case-studies/",
         "old": "Case Studies - Successful Case Studies of Client | NMG Technologies",
-        "new": "Case Studies - Successful Case Studies of Client | NMG ..."
+        "new": "Case Studies - Successful Case Studies of Client | NMG Te..."
       },
       {
         "url": "https://nmgtechnologies.com/company/about-us",
         "old": "About NMG Technologies - Software, Web & Mobile App Development Company",
-        "new": "About NMG Technologies - Software, Web & Mobile App Dev..."
+        "new": "About NMG Technologies - Software, Web & Mobile App Devel..."
       },
       {
         "url": "https://nmgtechnologies.com/company/careers/",
         "old": "Careers - Job Opportunity for Web, Mobile, and Software Developers | NMG Technologies",
-        "new": "Careers - Job Opportunity for Web, Mobile, and Software..."
+        "new": "Careers - Job Opportunity for Web, Mobile, and Software D..."
       },
       {
         "url": "https://nmgtechnologies.com/company/outsourcing/",
         "old": "Outsourcing Company - Best Outsource Software & Web Development Services | NMG Technologies",
-        "new": "Outsourcing Company - Best Outsource Software & Web Dev..."
+        "new": "Outsourcing Company - Best Outsource Software & Web Devel..."
       },
       {
         "url": "https://nmgtechnologies.com/company/process/",
         "old": "Our Successful Design & Development Process | NMG Technologies",
-        "new": "Our Successful Design & Development Process | NMG Techn..."
+        "new": "Our Successful Design & Development Process | NMG Technol..."
       },
       {
         "url": "https://nmgtechnologies.com/company/promise/",
         "old": "Our Promise: Understand, Build & Measure Client Efficient Solutions | NMG",
-        "new": "Our Promise: Understand, Build & Measure Client Efficie..."
+        "new": "Our Promise: Understand, Build & Measure Client Efficient..."
       },
       {
         "url": "https://nmgtechnologies.com/download-appdevelopmentcost-ebook",
         "old": "Download App Development Cost Ebook for 2019 with Example | NMG Technologies",
-        "new": "Download App Development Cost Ebook for 2019 with Examp..."
+        "new": "Download App Development Cost Ebook for 2019 with Example..."
       },
       {
         "url": "https://nmgtechnologies.com/download-content-editorial-calendar",
         "old": "Download Free Content Editorial Calendar Template | NMG Technologies",
-        "new": "Download Free Content Editorial Calendar Template | NMG..."
+        "new": "Download Free Content Editorial Calendar Template | NMG T..."
       },
       {
         "url": "https://nmgtechnologies.com/download-developmental-checklist",
         "old": "Download Web Development Checklist [Updated 2019] | NMG Technologies",
-        "new": "Download Web Development Checklist [Updated 2019] | NMG..."
+        "new": "Download Web Development Checklist [Updated 2019] | NMG T..."
       },
       {
         "url": "https://nmgtechnologies.com/get-custom-pricing",
         "old": "Get Custom Pricing & Quote for Development & Marketing Services | NMG Technologies",
-        "new": "Get Custom Pricing & Quote for Development & Marketing ..."
+        "new": "Get Custom Pricing & Quote for Development & Marketing Se..."
       },
       {
         "url": "https://nmgtechnologies.com/industry/fintech",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/industry/healthcare",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/industry/marketresearch",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/industry/staffing",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/industry/travel",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/resources/library/",
         "old": "Most Resourceful Content for Businesses to Get Started | NMG Technologies",
-        "new": "Most Resourceful Content for Businesses to Get Started ..."
+        "new": "Most Resourceful Content for Businesses to Get Started | ..."
       },
       {
         "url": "https://nmgtechnologies.com/resources/library/hire-web-developers-guide",
         "old": "The Ultimate Guide to Hire Web Developers in 2023 [Updated] | NMG",
-        "new": "The Ultimate Guide to Hire Web Developers in 2023 [Upda..."
+        "new": "The Ultimate Guide to Hire Web Developers in 2023 [Update..."
       },
       {
         "url": "https://nmgtechnologies.com/services/custom-software-development/",
         "old": "Best Custom Software Development Service Company - 2019 | NMG Technologies.",
-        "new": "Best Custom Software Development Service Company - 2019..."
+        "new": "Best Custom Software Development Service Company - 2019 |..."
       },
       {
         "url": "https://nmgtechnologies.com/services/custom-software-development/aspnet-development/",
         "old": "Asp.Net Development Services - Hire Asp.Net Web Developers | NMG Technologies",
-        "new": "Asp.Net Development Services - Hire Asp.Net Web Develop..."
+        "new": "Asp.Net Development Services - Hire Asp.Net Web Developer..."
       },
       {
         "url": "https://nmgtechnologies.com/services/custom-software-development/php-development/",
         "old": "PHP Development Services - Hire PHP Web Developers | NMG Technologies",
-        "new": "PHP Development Services - Hire PHP Web Developers | NM..."
+        "new": "PHP Development Services - Hire PHP Web Developers | NMG ..."
       },
       {
         "url": "https://nmgtechnologies.com/services/custom-software-development/saas-development/",
         "old": "SaaS App Development Services - Hire #1 SaaS Developers | NMG Technologies",
-        "new": "SaaS App Development Services - Hire #1 SaaS Developers..."
+        "new": "SaaS App Development Services - Hire #1 SaaS Developers |..."
       },
       {
         "url": "https://nmgtechnologies.com/services/ecommerce-development/",
         "old": "Ecommerce Web Development Company  | Hire World's Best E-commerce Developer",
-        "new": "Ecommerce Web Development Company  | Hire World's Best ..."
+        "new": "Ecommerce Web Development Company  | Hire World's Best E-..."
       },
       {
         "url": "https://nmgtechnologies.com/services/it-consulting/",
         "old": "IT Consulting Services - Best IT Consultant Firm For Your Business",
-        "new": "IT Consulting Services - Best IT Consultant Firm For Yo..."
+        "new": "IT Consulting Services - Best IT Consultant Firm For Your..."
       },
       {
         "url": "https://nmgtechnologies.com/services/mobile-application-development",
         "old": "#1 Mobile App Development Services - Hire  App Developers | NMG Technologies",
-        "new": "#1 Mobile App Development Services - Hire  App Develope..."
+        "new": "#1 Mobile App Development Services - Hire  App Developers..."
       },
       {
         "url": "https://nmgtechnologies.com/services/mobile-application-development/android-app-development",
         "old": "Android App Development Company - Hire Android Developers | NMG Technologies",
-        "new": "Android App Development Company - Hire Android Develope..."
+        "new": "Android App Development Company - Hire Android Developers..."
       },
       {
         "url": "https://nmgtechnologies.com/services/mobile-application-development/ios-app-development/",
         "old": "iPhone App Development Company - Hire iOS App Developers | NMG Technologies",
-        "new": "iPhone App Development Company - Hire iOS App Developer..."
+        "new": "iPhone App Development Company - Hire iOS App Developers ..."
       },
       {
         "url": "https://nmgtechnologies.com/services/mobile-application-development/tablet-app-development/",
         "old": "Tablet App Development Services - Hire Tablet App Developers | NMG Technologies",
-        "new": "Tablet App Development Services - Hire Tablet App Devel..."
+        "new": "Tablet App Development Services - Hire Tablet App Develop..."
       },
       {
         "url": "https://nmgtechnologies.com/services/user-interface-design/",
         "old": "User Interface (UI) Design Services - Hire Experienced UI/UX Designers",
-        "new": "User Interface (UI) Design Services - Hire Experienced ..."
+        "new": "User Interface (UI) Design Services - Hire Experienced UI..."
       },
       {
         "url": "https://nmgtechnologies.com/services/user-interface-design/mobile-design/",
         "old": "Mobile App Design Services - Hire Mobile App Designers Company",
-        "new": "Mobile App Design Services - Hire Mobile App Designers ..."
+        "new": "Mobile App Design Services - Hire Mobile App Designers Co..."
       },
       {
         "url": "https://nmgtechnologies.com/solution/artificial-intelligence/",
         "old": "AI Software Development - #1 Artificial Intelligence Development Company",
-        "new": "AI Software Development - #1 Artificial Intelligence De..."
+        "new": "AI Software Development - #1 Artificial Intelligence Deve..."
       },
       {
         "url": "https://nmgtechnologies.com/solution/augmented-reality/",
         "old": "Augmented Reality Apps Development Services - IT Staff Augmentation Developers",
-        "new": "Augmented Reality Apps Development Services - IT Staff ..."
+        "new": "Augmented Reality Apps Development Services - IT Staff Au..."
       },
       {
         "url": "https://nmgtechnologies.com/solution/blockchain",
         "old": "Blockchain Software & App Development Services - Hire Blockchain Developers",
-        "new": "Blockchain Software & App Development Services - Hire B..."
+        "new": "Blockchain Software & App Development Services - Hire Blo..."
       },
       {
         "url": "https://nmgtechnologies.com/solution/cloud-apps/",
         "old": "Cloud Application Development Services - Cloud App Migration Company",
-        "new": "Cloud Application Development Services - Cloud App Migr..."
+        "new": "Cloud Application Development Services - Cloud App Migrat..."
       },
       {
         "url": "https://nmgtechnologies.com/solution/fintech/",
         "old": "Fintech Apps & Software Development Services - Hire Fintech Developers",
-        "new": "Fintech Apps & Software Development Services - Hire Fin..."
+        "new": "Fintech Apps & Software Development Services - Hire Finte..."
       },
       {
         "url": "https://nmgtechnologies.com/solution/portals/",
         "old": "Web Portal Development Services - Ecommerce Portal Apps for Business",
-        "new": "Web Portal Development Services - Ecommerce Portal Apps..."
+        "new": "Web Portal Development Services - Ecommerce Portal Apps f..."
       },
       {
         "url": "https://nmgtechnologies.com/success-stories",
         "old": "Case Studies - Successful Case Studies of Client | NMG Technologies",
-        "new": "Case Studies - Successful Case Studies of Client | NMG ..."
+        "new": "Case Studies - Successful Case Studies of Client | NMG Te..."
       },
       {
         "url": "https://nmgtechnologies.com/success-stories/competiscan",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/success-stories/compound-banc",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/success-stories/international-insurance",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/success-stories/wealth-concert",
         "old": "IT Outsource Software, Web & Mobile App Development Company - NMG",
-        "new": "IT Outsource Software, Web & Mobile App Development Com..."
+        "new": "IT Outsource Software, Web & Mobile App Development Compa..."
       },
       {
         "url": "https://nmgtechnologies.com/work/ecommerce/",
         "old": "Ecommerce Website Design & Development Portfolio | NMG Technologies",
-        "new": "Ecommerce Website Design & Development Portfolio | NMG ..."
+        "new": "Ecommerce Website Design & Development Portfolio | NMG Te..."
       },
       {
-        "url": "https://nmgtechnologies.com/",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 15+ years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 15+ years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team i..."
+        "url": "https://nmgtechnologies.com/blog",
+        "old": "Blog",
+        "new": "Blog | nmgtechnologies.com | nmgtechnologies.com"
       },
       {
-        "url": "https://nmgtechnologies.com/agentic-ai",
-        "old": "Discover top Agentic AI consulting services specializing in custom AI agent development, enterprise AI solutions, and seamless integration. Hire experts to transform your business with intelligent automation. Schedule a demo today!",
-        "new": "Discover top Agentic AI consulting services specializing in custom AI agent development, enterprise AI solutions, and seamless integration. Hire exper..."
+        "url": "https://nmgtechnologies.com/blog/author/nishtha",
+        "old": "Blog | Nishtha",
+        "new": "Blog | Nishtha | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/design",
+        "old": "Blog | Design",
+        "new": "Blog | Design | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/events",
+        "old": "Blog | Events",
+        "new": "Blog | Events | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/events/page/2",
+        "old": "Blog | Events (2)",
+        "new": "Blog | Events (2) | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/featured",
+        "old": "Blog | Featured",
+        "new": "Blog | Featured | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/growth",
+        "old": "Blog | Growth",
+        "new": "Blog | Growth | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/marketing",
+        "old": "Blog | Marketing",
+        "new": "Blog | Marketing | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/mobile",
+        "old": "Blog | Mobile",
+        "new": "Blog | Mobile | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/outsourcing",
+        "old": "Blog | Outsourcing",
+        "new": "Blog | Outsourcing | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/technology",
+        "old": "Blog | Technology",
+        "new": "Blog | Technology | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/blog/tag/web",
+        "old": "Blog | Web",
+        "new": "Blog | Web | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/contact-us",
+        "old": "Contact Us - NMG Technologies",
+        "new": "Contact Us - NMG Technologies | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/disclaimer",
+        "old": "Website Disclaimer",
+        "new": "Website Disclaimer | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/crm-development",
+        "old": "CRM Development Services",
+        "new": "CRM Development Services | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/dedicated-team-setups/",
+        "old": "Dedicated Team Setups",
+        "new": "Dedicated Team Setups | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/erp-development",
+        "old": "ERP Development",
+        "new": "ERP Development | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/shopify",
+        "old": "Shopify Development",
+        "new": "Shopify Development | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/services/web-development",
+        "old": "Web Development",
+        "new": "Web Development | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/sitemap",
+        "old": "Sitemap - NMG Technologies",
+        "new": "Sitemap - NMG Technologies | nmgtechnologies.com"
+      },
+      {
+        "url": "https://nmgtechnologies.com/wordpress-development",
+        "old": "WordPress Development",
+        "new": "WordPress Development | nmgtechnologies.com"
       },
       {
         "url": "https://nmgtechnologies.com/ai-driven-business-transformation-consulting",
         "old": "Transform your business with AI. Our consulting services help you innovate faster, optimize operations, and scale sustainably through AI\u2011driven transformation.",
-        "new": "Transform your business with AI. Our consulting services help you innovate faster, optimize operations, and scale sustainably through AI\u2011driven transf..."
+        "new": "Transform your business with AI. Our consulting services help you innovate faster, optimize operations, and scale sustainably through AI\u2011driven transfor..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-driven-devops-cloud-automation",
         "old": "Accelerate software delivery with AI DevOps automation. Leverage AI-driven CI/CD pipelines, infrastructure automation, and cloud orchestration to enhance efficiency and innovation.",
-        "new": "Accelerate software delivery with AI DevOps automation. Leverage AI-driven CI/CD pipelines, infrastructure automation, and cloud orchestration to enha..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/ai-driven-enterprise-software-development",
-        "old": "Accelerate innovation with enterprise AI solutions from a trusted AI development company. Customized AI software solutions empower enterprises to optimize operations and unlock new growth opportunities.",
-        "new": "Accelerate innovation with enterprise AI solutions from a trusted AI development company. Customized AI software solutions empower enterprises to opti..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/ai-enhanced-web-mobile-application-development",
-        "old": "Transform your business with AI app development services. We create advanced AI applications that drive automation, improve decision-making, and deliver personalized user experiences.",
-        "new": "Transform your business with AI app development services. We create advanced AI applications that drive automation, improve decision-making, and deliv..."
+        "new": "Accelerate software delivery with AI DevOps automation. Leverage AI-driven CI/CD pipelines, infrastructure automation, and cloud orchestration to enhanc..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-machine-learning-solutions",
         "old": "Transform your enterprise with AI and machine learning solutions. Expert services designed to integrate intelligent automation and data-driven insights for sustainable success.",
-        "new": "Transform your enterprise with AI and machine learning solutions. Expert services designed to integrate intelligent automation and data-driven insight..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/ai-optimized-ecommerce-solutions",
-        "old": "Transform your ecommerce business with AI-powered solutions. Enhance customer experience, automate processes, and increase sales through intelligent ecommerce optimization.",
-        "new": "Transform your ecommerce business with AI-powered solutions. Enhance customer experience, automate processes, and increase sales through intelligent e..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/ai-powered-business-process-transformation",
-        "old": "Drive digital innovation with our AI powered service. We provide AI-driven business solutions designed to optimize performance, enhance efficiency, and accelerate growth.",
-        "new": "Drive digital innovation with our AI powered service. We provide AI-driven business solutions designed to optimize performance, enhance efficiency, an..."
+        "new": "Transform your enterprise with AI and machine learning solutions. Expert services designed to integrate intelligent automation and data-driven insights ..."
       },
       {
         "url": "https://nmgtechnologies.com/ai-powered-saas-development",
         "old": "Create and launch AI-powered SaaS applications with our AI SaaS builder platform. Deliver innovative SaaS products and AI-driven software solutions that scale with your business needs.",
-        "new": "Create and launch AI-powered SaaS applications with our AI SaaS builder platform. Deliver innovative SaaS products and AI-driven software solutions th..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/nmg-technologies-to-participate-in-leap-2023-tech-conference-in-riyadh-saudi-arabia",
-        "old": "NMG Technologies, a custom software development company, will be participating in LEAP 2023, a tech conference focused on the future of technology. Visit them.",
-        "new": "NMG Technologies, a custom software development company, will be participating in LEAP 2023, a tech conference focused on the future of technology. Vi..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/sempo-hangouts-session-user-experience",
-        "old": "Designing a great website user experience requires understanding the problems. Go through SEMPO Hangouts Session to know about the UX Design best practices.",
-        "new": "Designing a great website user experience requires understanding the problems. Go through SEMPO Hangouts Session to know about the UX Design best prac..."
+        "new": "Create and launch AI-powered SaaS applications with our AI SaaS builder platform. Deliver innovative SaaS products and AI-driven software solutions that..."
       },
       {
         "url": "https://nmgtechnologies.com/blog/startup-india-event-2016-key-highlights",
         "old": "Early this year we witnessed a one-of-a-kind event in the startup universe conducted by the Government of India on 16th January. #StartUpIndia event was graced by the Prime Minister Mr. Narendra Modi himself. The hashtag sure created a lot of buzz.",
-        "new": "Early this year we witnessed a one-of-a-kind event in the startup universe conducted by the Government of India on 16th January. #StartUpIndia event w..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/ui-ux-mobile-app-development",
-        "old": "Learn the Role of UI and UX in Mobile App Development in 2022. An efficient UI/UX design fulfilling end-user needs helps to drive sales and earn loyal customers.",
-        "new": "Learn the Role of UI and UX in Mobile App Development in 2022. An efficient UI/UX design fulfilling end-user needs helps to drive sales and earn loyal..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/blog/working-from-home-during-the-coronavirus-lockdown",
-        "old": "Discover how NMG is managing everything by setting the entire team for Work From Home during Coronavirus lockdown. Here are the best strategies and tools you need to know.",
-        "new": "Discover how NMG is managing everything by setting the entire team for Work From Home during Coronavirus lockdown. Here are the best strategies and to..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/company/about-us",
-        "old": "NMG Technologies is dedicated to building robust and scalable software, web and mobile solutions for businesses through an innovative approach, to provide you the best services.",
-        "new": "NMG Technologies is dedicated to building robust and scalable software, web and mobile solutions for businesses through an innovative approach, to pro..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/company/outsourcing/",
-        "old": "NMG\u2019s Part Artist \u2013 Part Scientist is a systematic approach where we find effective ways to work as a collaborative team, helping us transform business processes into an actionable powerhouse.",
-        "new": "NMG\u2019s Part Artist \u2013 Part Scientist is a systematic approach where we find effective ways to work as a collaborative team, helping us transform busines..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/company/promise/",
-        "old": "NMG\u2019s Part Artist \u2013 Part Scientist Development Approach bridges the gap between your business model and your customers, and builds goal oriented, personalized solutions.",
-        "new": "NMG\u2019s Part Artist \u2013 Part Scientist Development Approach bridges the gap between your business model and your customers, and builds goal oriented, pers..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/download-content-editorial-calendar",
-        "old": "Download Free Content Editorial Calendar eBook .90% of marketers now use an editorial calendar. It's easy-to-use to to take control of your content marketing.",
-        "new": "Download Free Content Editorial Calendar eBook .90% of marketers now use an editorial calendar. It's easy-to-use to to take control of your content ma..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/get-custom-pricing",
-        "old": "Learn about our processes and working culture, building a relationship with the team \u2013 right from the start. Fill out this form and we\u2019ll get back to you to set up a time for your consultation!",
-        "new": "Learn about our processes and working culture, building a relationship with the team \u2013 right from the start. Fill out this form and we\u2019ll get back to ..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/industry/healthcare",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/industry/marketresearch",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/industry/staffing",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/industry/travel",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
+        "new": "Early this year we witnessed a one-of-a-kind event in the startup universe conducted by the Government of India on 16th January. #StartUpIndia event was..."
       },
       {
         "url": "https://nmgtechnologies.com/mobile-development-checklist",
         "old": "Don't forget a step! Our mobile app development checklist ensures you cover everything from planning & design to development & testing. Launch with confidence!",
-        "new": "Don't forget a step! Our mobile app development checklist ensures you cover everything from planning & design to development & testing. Launch with co..."
+        "new": "Don't forget a step! Our mobile app development checklist ensures you cover everything from planning & design to development & testing. Launch with conf..."
       },
       {
         "url": "https://nmgtechnologies.com/privacy-policy",
         "old": "NMG Technologies respects and realizes importance of protecting your privacy, and is committed to protecting your Privacy Rights to fullest possible extend.",
-        "new": "NMG Technologies respects and realizes importance of protecting your privacy, and is committed to protecting your Privacy Rights to fullest possible e..."
+        "new": "NMG Technologies respects and realizes importance of protecting your privacy, and is committed to protecting your Privacy Rights to fullest possible ext..."
       },
       {
         "url": "https://nmgtechnologies.com/resources/library/python-development-guide",
         "old": "Learn how Python development can benefit your company! This guide unlocks the power of Python for businesses, showing you how to automate tasks, streamline workflows, and gain a competitive edge.",
-        "new": "Learn how Python development can benefit your company! This guide unlocks the power of Python for businesses, showing you how to automate tasks, strea..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/custom-software-development/",
-        "old": "NMG Technologies is a custom software development company providing businesses worldwide with custom software solutions from industry specialized developers.",
-        "new": "NMG Technologies is a custom software development company providing businesses worldwide with custom software solutions from industry specialized deve..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/custom-software-development/php-development/",
-        "old": "NMG provides a dedicated team of 60+ PHP developers that have experience in building more than 129+ successful web applications solving business challenges.",
-        "new": "NMG provides a dedicated team of 60+ PHP developers that have experience in building more than 129+ successful web applications solving business chall..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/custom-software-development/saas-development/",
-        "old": "NMG offers long-term success partnerships for SaaS monetization strategy ensuring that the market goals are defined up front, targeting the service based on your goals and driving customer relationships with careful planning and execution",
-        "new": "NMG offers long-term success partnerships for SaaS monetization strategy ensuring that the market goals are defined up front, targeting the service ba..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/dedicated-team-setups/",
-        "old": "Hire a dedicated development team from NMG Technologies.. We provide cost-effective, experienced developers, designers, and QA engineers to meet your project needs.",
-        "new": "Hire a dedicated development team from NMG Technologies.. We provide cost-effective, experienced developers, designers, and QA engineers to meet your ..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/mobile-application-development",
-        "old": "NMG Technologies is the most trusted mobile app development company. We have expertise in building quality Android, iOS & IoT mobile apps. Get Started Today!",
-        "new": "NMG Technologies is the most trusted mobile app development company. We have expertise in building quality Android, iOS & IoT mobile apps. Get Started..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/services/user-interface-design/",
-        "old": "Hire our award-winning UI/UX Design agency! We create stunning user interfaces that are both visually appealing and highly functional. Get a Free Quote today!",
-        "new": "Hire our award-winning UI/UX Design agency! We create stunning user interfaces that are both visually appealing and highly functional. Get a Free Quot..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/solution/artificial-intelligence/",
-        "old": "We provide AI consulting services for artificial intelligence software development. Connect now with our AI app developer to enabling businesses to work smarter and faster.",
-        "new": "We provide AI consulting services for artificial intelligence software development. Connect now with our AI app developer to enabling businesses to wo..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/solution/augmented-reality/",
-        "old": "We develop advanced Augmented Reality applications for diverse business requirements. We offer brands with innovative AR solutions with advanced marketing techniques and campaigns.",
-        "new": "We develop advanced Augmented Reality applications for diverse business requirements. We offer brands with innovative AR solutions with advanced marke..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/solution/blockchain",
-        "old": "NMG is No.1 Blockchain Development company in USA.  Our blockchain Developers provide enterprise application development services . Hire Now! 40% Cost Savings.",
-        "new": "NMG is No.1 Blockchain Development company in USA.  Our blockchain Developers provide enterprise application development services . Hire Now! 40% Cost..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/solution/cloud-apps/",
-        "old": "NMG has years of business experience to deliver the cloud app development services that drive your cloud application migration and help you achieve your goals.",
-        "new": "NMG has years of business experience to deliver the cloud app development services that drive your cloud application migration and help you achieve yo..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/solution/fintech/",
-        "old": "We builds Fintech app & software solutions for businesses in need of powerful financial technologies to manage their accounts and payees, customers to manage credit scores.",
-        "new": "We builds Fintech app & software solutions for businesses in need of powerful financial technologies to manage their accounts and payees, customers to..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/success-stories/competiscan",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/success-stories/compound-banc",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/success-stories/international-insurance",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
-      },
-      {
-        "url": "https://nmgtechnologies.com/success-stories/wealth-concert",
-        "old": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in-house. Get Started Today!",
-        "new": "NMG Technologies is a leading IT outsourcing company with over 12 years of experience, 1000+ projects delivered, 500+Clients and a 100+ people team in..."
+        "new": "Learn how Python development can benefit your company! This guide unlocks the power of Python for businesses, showing you how to automate tasks, streaml..."
       }
     ],
-    "redirect_map": []
+    "redirect_map": [
+      {
+        "from": "https://nmgtechnologies.com/hs-fs/hubfs/B-W_icon.png.png?width=101&height=100&name=B-W_icon.png.png",
+        "to": "https://nmgtechnologies.com/",
+        "reason": "404 response \u2192 nearest live ancestor or homepage"
+      },
+      {
+        "from": "https://nmgtechnologies.com/hs-fs/hubfs/edtech.png.png?width=101&height=100&name=edtech.png.png",
+        "to": "https://nmgtechnologies.com/",
+        "reason": "404 response \u2192 nearest live ancestor or homepage"
+      },
+      {
+        "from": "https://nmgtechnologies.com/hs-fs/hubfs/fintech.png.png?width=101&height=100&name=fintech.png.png",
+        "to": "https://nmgtechnologies.com/",
+        "reason": "404 response \u2192 nearest live ancestor or homepage"
+      },
+      {
+        "from": "https://nmgtechnologies.com/hs-fs/hubfs/fintechgrey.png?width=122&height=80&name=fintechgrey.png",
+        "to": "https://nmgtechnologies.com/",
+        "reason": "404 response \u2192 nearest live ancestor or homepage"
+      },
+      {
+        "from": "https://nmgtechnologies.com/hs-fs/hubfs/glob.png.png?width=101&height=100&name=glob.png.png",
+        "to": "https://nmgtechnologies.com/",
+        "reason": "404 response \u2192 nearest live ancestor or homepage"
+      },
+      {
+        "from": "https://nmgtechnologies.com/hs-fs/hubfs/healthgrey.png?width=105&height=90&name=healthgrey.png",
+        "to": "https://nmgtechnologies.com/",
+        "reason": "404 response \u2192 nearest live ancestor or homepage"
+      }
+    ]
   },
   "recommendations": [
-    "Fix the 12 High-severity 'duplicate_title' issue(s) first.",
-    "Fix the 6 High-severity 'broken_link' issue(s) first.",
-    "Fix the 63 Medium-severity 'title_too_long' issue(s) first.",
-    "Fix the 16 Medium-severity 'duplicate_meta_description' issue(s) first.",
-    "Fix the 2 Medium-severity 'missing_h1' issue(s) first."
+    "PRIORITY: Fix 12 duplicate title issue(s) immediately \u2014 these directly harm crawlability and rankings.",
+    "High: Resolve 6 broken link URL(s).",
+    "Medium: Address 63 title too long URL(s) to improve SERP appearance.",
+    "Medium: Address 16 duplicate meta description URL(s) to improve SERP appearance.",
+    "Medium: Address 2 missing h1 URL(s) to improve SERP appearance.",
+    "Low: 244 low-severity issues across 5 issue type(s) \u2014 tackle after High/Medium."
   ],
   "run_meta": {
     "model": "qwen3.5:9b",
     "model_calls": 0,
-    "duration_sec": 0.0
+    "duration_sec": 0
   }
 }
