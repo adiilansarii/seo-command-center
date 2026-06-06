@@ -185,6 +185,15 @@ class H(BaseHTTPRequestHandler):
             self._send(200, open(p, encoding="utf-8").read() if os.path.exists(p) else "", "application/javascript")
         elif self.path == "/state":
             self._send(200, json.dumps({k: v for k, v in RUN.items() if k != "rows"}), "application/json")
+        elif self.path == "/run":
+            # Trigger audit inside the server process to update the live dashboard
+            seo_load("../sample-export/")
+            seo_detect()
+            seo_fix()
+            issues = RUN["issues"]
+            recs = [f"Fix the {i['count']} {i['severity']}-severity '{i['type']}' issue(s)." for i in issues[:5]]
+            seo_recommend(recs)
+            self._send(200, "Audit triggered! Check the dashboard.")
         elif self.path == "/events":
             self.send_response(200); self.send_header("Content-Type", "text/event-stream")
             self.send_header("Cache-Control", "no-cache"); self.end_headers()
